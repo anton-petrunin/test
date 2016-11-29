@@ -52,7 +52,7 @@ highlight=LaTeX
 line=107
 mode=LaTeX
 open=true
-order=2
+order=3
 
 [item:intuition.tex]
 archive=true
@@ -62,7 +62,7 @@ highlight=LaTeX
 line=119
 mode=LaTeX
 open=true
-order=1
+order=0
 
 [item:puzzles.kilepr]
 archive=true
@@ -81,7 +81,7 @@ encoding=UTF-8
 highlight=LaTeX
 line=7
 mode=LaTeX
-open=false
+open=true
 order=2
 
 [item:puzzles.tex]
@@ -92,7 +92,7 @@ highlight=LaTeX
 line=14
 mode=LaTeX
 open=true
-order=0
+order=1
 
 [view-settings,view=0,item:intuition-sol.tex]
 CursorColumn=0
