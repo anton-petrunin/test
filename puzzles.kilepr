@@ -120,10 +120,10 @@ order=2
 
 [item:puzzles.tex]
 archive=true
-column=0
+column=8
 encoding=UTF-8
 highlight=LaTeX
-line=10
+line=15
 mode=LaTeX
 open=true
 order=0
@@ -159,7 +159,7 @@ JumpList=
 ViMarks=.,6,21,[,7,0,],-1,-1
 
 [view-settings,view=0,item:puzzles.tex]
-CursorColumn=0
-CursorLine=10
+CursorColumn=8
+CursorLine=15
 JumpList=
-ViMarks=.,10,0,[,10,0,],10,0
+ViMarks=.,15,7,[,15,7,],15,7
