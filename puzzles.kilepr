@@ -60,13 +60,13 @@ Mode=LaTeX
 
 [item:geography.tex]
 archive=true
-column=19
+column=0
 encoding=UTF-8
 highlight=LaTeX
 line=4
 mode=LaTeX
 open=true
-order=3
+order=5
 
 [item:geographysol.tex]
 archive=true
@@ -120,16 +120,16 @@ order=2
 
 [item:puzzles.tex]
 archive=true
-column=8
+column=14
 encoding=UTF-8
 highlight=LaTeX
-line=15
+line=14
 mode=LaTeX
 open=true
 order=1
 
 [view-settings,view=0,item:geography.tex]
-CursorColumn=19
+CursorColumn=0
 CursorLine=4
 JumpList=
 ViMarks=.,4,11,[,4,11,],4,18
@@ -159,7 +159,7 @@ JumpList=
 ViMarks=.,6,21,[,7,0,],-1,-1
 
 [view-settings,view=0,item:puzzles.tex]
-CursorColumn=8
-CursorLine=15
+CursorColumn=14
+CursorLine=14
 JumpList=
 ViMarks=.,15,7,[,15,7,],15,7
