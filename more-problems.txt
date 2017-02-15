@@ -1,0 +1,7 @@
+ 1. Pirat's democracy
+ 2. Picture and two nails --- замотать верёвку за два гвоздя так, картина упадёт если вытащить любоий гвоздь.
+ 3. n lines in general position cut from the plane at least n-2 triangles
+ 4. Monkey and typewriter what is first aaa or abc?
+ 
+ Comments: sometimes you write a comment before the problem, and it look like a part of the previous one;
+ I would suggest to do it after all the times.
