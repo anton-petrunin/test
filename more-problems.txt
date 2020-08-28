@@ -1,11 +1,25 @@
- 1. Pirat's democracy --- 5 pirats have 100 gold coins. They decided to divide it in a democratic way.
- The oldest one can propose a way to divide the money and after that the rest of pirats wote, if the majority votes in in its favor or votes split equally, then they accept the proposed way; othervise the propeser is kiked in the ocian. Each of them smart and greedy, they vote only if it is ... and vote agains if .... otherwise do not bother to vote.
- What is the maximal amout which the oldest pirat can leave for him self?
- 2. Picture and two nails --- замотать верёвку за два гвоздя так, картина упадёт если вытащить любоий гвоздь.
- 3. n lines in general position cut from the plane at least n-2 triangles
- 4. Monkey and typewriter what is first aaa or abc?
- 5. Kuratovski closure-interior poroblem.
- 6. List the countries without an outlet to the sea such that all its neighbors do not have an outlet to the sea.
+1. Pirat's democracy --- 5 pirats have 100 gold coins. They decided to divide it in a democratic way.
+The oldest one can propose a way to divide the money and after that the rest of pirats wote, if the majority votes in in its favor or votes split equally, then they accept the proposed way; othervise the propeser is kiked in the ocian. Each of them smart and greedy, they vote only if it is ... and vote agains if .... otherwise do not bother to vote.
+What is the maximal amout which the oldest pirat can leave for him self?
+
+This is a good example of a problem with an easy backward solution; it was used in my mathcircle.
+
+2. Picture and two nails --- замотать верёвку за два гвоздя так, картина упадёт если вытащить любоий гвоздь.
+
+3. n lines in general position cut from the plane at least n-2 triangles
+
+4. Monkey and typewriter --- what is first aaa or abc?
+
+5. Kuratovski closure-interior poroblem.
+
+6. Name a country without an outlet to the sea such that all its neighbors do not have an outlet to the sea.
+
+7. Is it possible to capture a sphere in a knot? https://mathoverflow.net/questions/8091/is-it-possible-to-capture-a-sphere-in-a-knot
+
+8. https://mathoverflow.net/questions/200535/continuous-maps-which-send-intervals-of-mathbbr-to-convex-subsets-of-math
  
- Comments: sometimes you write a comment before the problem, and it look like a part of the previous one;
- I would suggest to do it after all the times.
+9. n lines in general position; there are n−2
+small triangles https://mathoverflow.net/questions/47377/n-lines-in-general-position-there-are-n-2-small-triangles
+
+10. https://mathoverflow.net/questions/3332/two-commuting-mappings-in-the-disk
+ 
