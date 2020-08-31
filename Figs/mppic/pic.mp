@@ -54,4 +54,32 @@ whitelabel(btex $\tfrac{\sqrt{3}}4$ etex, (.31*(z.x+z.y+1.2*z.a)));
 whitelabel(btex $\tfrac\pi6$ etex, (.38*(z.x-z.y+z.b)));
 endfig;
 
+beginfig(2) 
+save u, p;
+u:=2cm;
+path p[];
+
+z.P=origin;
+z.Q=(1,0)*u;
+z.R=(.7,.6)*u;
+
+p0=z.P{up}..z.R..z.Q{down}..tension 1.5..cycle;
+
+labelarcsprof(z.Q, z.P, z.R, 21, 7, btex \small{$\theta$} etex);
+
+draw p0 pensemibold;
+
+draw z.P--z.R;
+
+drawarrow ddline(z.P,z.Q)(.2,.2);
+drawarrow z.P-(0,.4)*u--z.P+(0,.7)*u;
+
+dOt z.P,z.Q,z.R;
+
+label.ulft(btex $P$ etex, z.P);
+label.urt(btex $Q$ etex, z.Q);
+label.urt(btex $R(\theta)$ etex, z.R);
+
+endfig;
+
 end
