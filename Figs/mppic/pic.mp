@@ -79,6 +79,7 @@ dOt z.P,z.Q,z.R;
 label.ulft(btex $P$ etex, z.P);
 label.urt(btex $Q$ etex, z.Q);
 label.urt(btex $R(\theta)$ etex, z.R);
+label(btex $r(\theta)$ etex rotated angle(z.R), .5*z.R +6*(unitvector(z.R) rotated 90));
 
 endfig;
 
