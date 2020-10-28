@@ -28,12 +28,14 @@ urlcolor=black,
 
 %\DeclareUnicodeCharacter{FEFF}{*******************************}
 
+\csname @openrightfalse\endcsname
+
 \renewcommand{\ge}{\geqslant}
 \renewcommand{\le}{\leqslant}
-\def\heart{\hfill$\heartsuit$\medskip}
-\def\heartf{\vskip-4mm\heart}
 
 \renewcommand{\qedsymbol}{$\heartsuit$}
+\def\heart{\qed\medskip}
+\def\heartf{\vskip-4mm\heart}
 
 \newcommand*{\z}[1]{#1\nobreak\discretionary{}%
             {\hbox{$\mathsurround=0pt #1$}}{}}
