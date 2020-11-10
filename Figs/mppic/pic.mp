@@ -56,7 +56,7 @@ endfig;
 
 beginfig(2) 
 save u, p;
-u:=2cm;
+u:=3cm;
 path p[];
 
 z.P=origin;
