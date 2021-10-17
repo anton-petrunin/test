@@ -1,0 +1,91 @@
+\newif\ifpublisher
+\publisherfalse
+
+\ifpublisher
+\usepackage[charter,expert]{mathdesign}
+\usepackage{charter}
+\else
+\usepackage{amsfonts,amssymb}
+\fi
+
+\usepackage[babel=true,tracking=false,stretch=10,shrink=10%  expansion=false
+]{microtype}
+
+
+\graphicspath{{mp/}{gfx/}}
+
+\RequirePackage{caption}
+
+\captionsetup{labelformat=empty,justification=centerlast,font={small}}
+
+
+\renewcommand\bottomfraction{.9}
+
+% Dublirovanie znakov pri perenose
+
+\binoppenalty10000
+\relpenalty10000
+\def\hm#1{#1\nobreak\discretionary{}{\hbox{$#1$}}{}}
+
+\emergencystretch1em
+\hyphenpenalty300
+\tolerance300
+\doublehyphendemerits=250000
+\parskip0pt
+
+\advance\medmuskip1mu
+\thickmuskip\medmuskip
+\advance \thinmuskip1mu
+
+\ifpublisher
+\RequirePackage{nccfrac}
+\fi
+
+\newcommand\slfrac[2]{#1/#2}
+\newcommand\sslfrac[2]{\,\raisebox{2.5pt}{\fontsize{7}{10pt}\selectfont #1}\mkern-1mu/\mkern-2mu\raisebox{-1.7pt}{\fontsize{7}{10pt}\selectfont #2}}
+
+\def\,{\hskip1.5pt}
+
+\newcommand\urdots{\text{\raisebox{.1ex}{.}\raisebox{.5ex}{.}\raisebox{.9ex}{.}}}
+
+\let\upn\textup
+
+\RequirePackage{change}
+% \providecommand\change[2]{#2}
+
+
+\RequirePackage{titlesec,titletoc}
+
+\titleformat{\chapter}[block]{\LARGE\filcenter}{\thechapter.}{.5em}{}
+\titlespacing{\chapter}{0pt}{1.5\baselineskip}{1.5\baselineskip minus2pt}
+
+
+\titleformat{\section}[block]{\bfseries\boldmath\large\filcenter}{\S\,\thesection.}{.5em}{}
+\titlespacing*{\section}{0pt}{2\baselineskip plus 3pt  minus 6pt}
+{1\baselineskip plus 3pt minus 3pt}
+
+\titleformat{\subsection}[block]{\bfseries\boldmath}{\thesubsection.}{.5em}{}
+\titlespacing{\subsection}{\parindent}{1\baselineskip plus 3pt minus 3pt}{0pt}
+% {1\baselineskip plus 3pt minus 3pt}{.5\baselineskip plus 3pt minus 3pt} % {.5em}
+
+\titleformat{\subsubsection}[runin]{\bfseries\boldmath}{\textup{\thesubsubsection.}}{.5em}{}[.]
+\titlespacing*{\subsubsection}{\parindent}{.5\baselineskip plus 3pt minus 3pt}{.5em}
+
+\titleformat{\paragraph}[runin]{\itshape}{\textup{\theparagraph.}}{.5em}{}[.]
+\titlespacing*{\paragraph}{\parindent}{.5\baselineskip plus 3pt minus 3pt}{.5em}
+
+\titlecontents{section}
+[2em] % ie, 1.5em (chapter) + 2.3em
+{}
+{\contentslabel[\S~\thecontentslabel.]{2em}}
+{\hskip-2em}
+{\titlerule*[1pc]{.}\contentspage}
+% theorems
+
+\titlecontents{subsection}
+[4.3em] % ie, 1.5em (chapter) + 2.3em
+{}
+{\contentslabel[\thecontentslabel.]{2.3em}}
+{\hskip-2.2em}
+{\titlerule*[1pc]{.}\contentspage}
+

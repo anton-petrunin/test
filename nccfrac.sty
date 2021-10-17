@@ -1,0 +1,66 @@
+\newdimen\NCC@fracrulewidth
+\def\NCC@select@msize{\relax
+  \@tempdima \f@size\p@
+  \ifdim\@tempdima>11.5\p@
+    \@tempdimb .9\@tempdima
+  \else
+    \@tempdimb .9\@tempdima
+    \ifdim\@tempdimb<5\p@ \@tempdimb 5\p@\fi
+  \fi
+  \NCC@fracrulewidth .05\@tempdima
+  \@tempdima 1.25\NCC@fracrulewidth
+  \ifdim\NCC@fracrulewidth>.45\p@ \else
+    \ifdim\NCC@fracrulewidth>.34\p@ \NCC@fracrulewidth .4\p@
+    \else \NCC@fracrulewidth .3\p@
+    \fi
+  \fi
+}
+\def\NCC@innerfrac#1{\genfrac{}{}\NCC@fracrulewidth{#1}}
+\def\NCC@prepare@msize{%
+  \@tempdima 1.2\@tempdimb
+  \advance\@tempdimb .5\p@
+  \edef\@tempa{\strip@pt\@tempdimb}%
+  \expandafter\NCC@floor\expandafter\@tempa\@tempa.\@nil
+  \fontsize\@tempa\@tempdima\selectfont
+  \def\frac{\protect\NCC@innerfrac{}}%
+  \def\dfrac{\NCC@innerfrac\z@}%
+  \def\tfrac{\NCC@innerfrac\@ne}%
+  \def\binom{\protect\genfrac()\z@{}}%
+}
+\def\NCC@floor#1#2.#3\@nil{\def#1{#2}}
+%% ...
+\DeclareRobustCommand*\medmath[1]{\NCC@select@msize
+  \mathord{\raise\@tempdima\hbox{\NCC@prepare@msize
+    $\displaystyle
+      \fontdimen8\textfont2 = 5.121pt
+      \fontdimen11\textfont2 = 5.62947pt
+#1$}}%
+}
+\DeclareRobustCommand*\mmedmath[1]{\NCC@select@msize
+  \mathord{\raise\@tempdima\hbox{\NCC@prepare@msize
+    $\displaystyle
+      \fontdimen8\textfont2 =4.121pt
+      \fontdimen11\textfont2 =4.12947pt
+#1$}}%
+}
+%% ...
+\DeclareRobustCommand*\mfrac[2]{\medmath{\frac{#1}{#2}}}
+\DeclareRobustCommand*\smfrac[2]{\mmedmath{\frac{#1}{#2}}}
+\DeclareRobustCommand*\mbinom[2]{%
+  \Bigl(\medmath{\genfrac{}{}{\z@}{}{#1}{#2}}\Bigr)%
+}
+\DeclareRobustCommand*\mfracbinom[2]{%
+  \medmath{\genfrac{}{}{\z@}{}{#1}{#2}}%
+}
+%% ...
+\DeclareRobustCommand\frac{\NCC@op@select\mfrac{\genfrac{}{}{}{}}}
+\DeclareRobustCommand\binom{\NCC@op@select\mbinom{\genfrac()\z@{}}}
+\DeclareRobustCommand\fracbinom{\NCC@op@select\mfracbinom{\genfrac()\z@{}}}
+\def\NCC@op@select#1#2#3#4{%
+  \mathchoice{#1{#3}{#4}}{#1{#3}{#4}}%
+             {\scriptstyle#2{#3}{#4}}{\scriptscriptstyle#2{#3}{#4}}%
+}
+\def\NCC@op@select#1#2#3#4{%
+  \mathchoice{#1{#3}{#4}}{#1{#3}{#4}}%
+             {\scriptstyle#2{#3}{#4}}{\scriptscriptstyle#2{#3}{#4}}%
+}

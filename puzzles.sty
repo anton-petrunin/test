@@ -1,30 +1,41 @@
-\usepackage{amssymb, amsfonts, amsmath, amsthm}
+\usepackage{% amssymb, amsfonts,
+  amsmath,amsthm}
 \usepackage[english,russian]{babel}
-\usepackage[T1,T2A]{fontenc}
+% \usepackage[T1,T2A]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{indentfirst}%+отступ в первой строке
 \usepackage{graphicx}
 \usepackage{wrapfig}
 \usepackage{bm}
 \usepackage[
-colorlinks=true,
-citecolor=black,
-linkcolor=black,
-anchorcolor=black,
-filecolor=black,
-menucolor=black,
-urlcolor=black,
+colorlinks=false,
+% citecolor=black,
+% linkcolor=black,
+% anchorcolor=black,
+% filecolor=black,
+% menucolor=black,
+% urlcolor=black,
+unicode=true
 ]{hyperref}
 \usepackage{gensymb} %для \degree
-\usepackage{enumerate}
+\usepackage{enumitem}
 
 \usepackage[xindy]{imakeidx}
 
 \usepackage{xcolor}
-\selectcolormodel{gray}
+% \selectcolormodel{gray}
 
 \usepackage{epigraph}
 \renewcommand{\epigraphsize}{\footnotesize}
+
+\epigraphrule0pt
+\renewcommand\textflush{flushepinormal}
+\renewcommand{\@epitext}[1]{%
+   \begin{minipage}{\epigraphwidth}\begin{\textflush} #1\par
+       \ifdim\epigraphrule>\z@ \@epirule \else % \vspace*{0pt}
+       \fi
+   \end{\textflush}\end{minipage}}
+
 
 %\DeclareUnicodeCharacter{FEFF}{*******************************}
 
@@ -35,8 +46,25 @@ urlcolor=black,
 \def\phi{\varphi}
 
 \renewcommand{\qedsymbol}{$\heartsuit$}
-\def\heart{\qed\medskip}
+\def\heart{\qed} % \medskip}
 \def\heartf{\vskip-4mm\heart}
 
 \newcommand*{\z}[1]{#1\nobreak\discretionary{}%
             {\hbox{$\mathsurround=0pt #1$}}{}}
+
+
+
+ \setcounter{secnumdepth}{-1}
+
+ \renewcommand\chaptermark[1]{\markboth{#1}{#1}}
+
+ \newcommand\tsum{\mathop{\textstyle\sum}\limits}
+
+
+ \RequirePackage{booktabs}
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: "puzzles"
+%%% End:
+
+          
