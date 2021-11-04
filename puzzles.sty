@@ -20,6 +20,7 @@ unicode=true
 \usepackage{gensymb} %для \degree
 \usepackage{enumitem}
 
+
 \usepackage[xindy]{imakeidx}
 
 \usepackage{xcolor}
@@ -35,6 +36,32 @@ unicode=true
        \ifdim\epigraphrule>\z@ \@epirule \else % \vspace*{0pt}
        \fi
    \end{\textflush}\end{minipage}}
+
+\usepackage[
+sorting=debug,
+bibencoding=auto,
+backend=biber,
+maxnames=10,
+%babel=other,
+%autolang=other,
+doi=false,
+url=false,
+style=numeric-comp,
+isbn=false]{biblatex}
+\usepackage{csquotes}
+
+\AtBeginDocument{%removes the last "and" in author field
+    \renewcommand*{\finalnamedelim}{,\space}
+}
+
+
+\AtEveryBibitem{\clearlist{language}}
+\AtEveryBibitem{\clearlist{note}}
+\renewbibmacro{in:}{}
+\renewcommand*{\bibfont}{\scriptsize}
+
+\addbibresource{library.bib}
+
 
 
 %\DeclareUnicodeCharacter{FEFF}{*******************************}
